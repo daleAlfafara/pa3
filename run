@@ -8,5 +8,5 @@ fi;
 CLASSNAME=$(echo $1 | cut -f 1 -d '.')
 
 rm *.class &> /dev/null;
-javac -cp tester.jar *.java &&
+javac -cp tester.jar $CLASSNAME.java &&
 java -classpath tester.jar:. tester.Main $CLASSNAME
